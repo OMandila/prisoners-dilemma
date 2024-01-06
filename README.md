@@ -1,4 +1,4 @@
-# Prisoner's Dilemma : Game Theory Illustrated
+# The Prisoner's Dilemma : Game Theory Illustrated
 
 ## Introduction
 This project is an interactive web application that simulates the classic game theory scenario known as the Prisoner's Dilemma.
@@ -6,7 +6,7 @@ Game theory is a theoretical framework for conceiving social situations among co
 In the Prisoner's Dilemma, two prisoners must decide whether to betray the other or remain silent. The outcome depends on the decisions of both, acting independently, illustrating the interdependence typical in game theory. Game theory applies to the decisions of opponents, and it differs from decision theory, which typically applies to an individual decision-maker.
 
 ## Project Overview
-The Prisoner's Dilemma Simulation is a simple web application that simulates a decision-making scenario based on game theory principles. It allows users to play against a computer-controlled opponent in a series of decision-making rounds. The user will make a choice (e.g., "Cooperate" or "Defect"), and the program will simulate the other player's choice, displaying the outcome. The application demonstrates the outcomes of cooperation versus defection and provides insights into game theory principles.
+This is a simple web application that simulates a decision-making scenario based on the Prisoner's Dilemma. It allows users to play against a computer-controlled opponent in a series of decision-making rounds. The user will make a choice (e.g., "Cooperate" or "Defect"), and the program will simulate the other player's choice, displaying the outcome. The application demonstrates the outcomes of cooperation versus defection and provides insights into game theory principles.
 The application will also educate users on the concepts of Nash Equilibrium and dominant strategies by allowing users to set game strategies through an engaging, user-friendly interface.
 
 ### Good to know
@@ -92,8 +92,13 @@ This project is released under the [MIT License](LICENSE.txt).
 ## Acknowledgement
 
 ### Code Inspiration
+
+### Content Inspiration
 The project was inspired by classical game theory literature and other educational tools like:
-- Youtube
+- The INFORMS' Analytics Body of Knowledge textbook, and
+- The 'Game Theory: The Pinnacle of Decision Making (REMASTERED)' YouTube video
 
 ### Media
-FontAwesome
+Icons from FontAwesome
+
+© 2023 Oliver Mandila. All rights reserved.

@@ -1,0 +1,18 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* --------- Global style */
+body {
+    background-color: white;
+    font-family: "Tektur", sans-serif;
+    color: #445361;
+    text-align: center;
+}
+
