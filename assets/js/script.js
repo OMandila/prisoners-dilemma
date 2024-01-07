@@ -160,7 +160,7 @@ function updateChart() {
 
 /**
  * The getOpponentDecision function determines the computer's decision based on the selected opponent strategy.
- * @param nothing
+ * @param {nothing}
  * @returns nothing
  */
 function getOpponentDecision() {
@@ -175,5 +175,29 @@ function getOpponentDecision() {
         default: // Random
             return Math.random() > 0.5 ? 'Cooperate' : 'Defect';
     }
+}
+
+/**
+ * The handleChoice function handles the player's choice and determines the game's outcome.
+ * @param {*} event 
+ * @returns 
+ */
+function handleChoice(event) {
+    if (tries >= maxTries) {
+        alert('Game over! Please restart to play again.');
+        return;
+    }
+
+    const userDecision = event.target.id.includes('Cooperate') ? 'Cooperate' : 'Defect';
+    lastPlayerDecision = userDecision;
+    const opponentDecision = getOpponentDecision();
+
+    // Update the grid selections and game scores.
+    updateGridSelections(userDecision, opponentDecision);
+    updateScores(userDecision, opponentDecision);
+
+    // Increment the tries counter.
+    tries++;
+    document.getElementById('tries').textContent = tries;
 }
 
