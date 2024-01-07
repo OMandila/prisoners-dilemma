@@ -41,6 +41,43 @@
 
     </div>
     
+    <div id="tries1">
+        <h4>Enter the number of times you wish to play then click Start Game below:</h4>
+    </div>
+
+    <div id="tries2" style="display: none;">
+        <p>You have played <strong><span id="tries">0</span></strong> time(s) since you started the game. Click Start Game below to restart the counter:</p>
+    </div>
+
+    <div id="setup">
+        <input type="number" id="maxTries" placeholder="Enter number of tries" min="1">
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <div id="strategySelection" style="display: none;">
+        <label for="opponentStrategy">Select Opponent's Strategy:</label>
+        <select id="opponentStrategy">
+            <option value="random">Random</option>
+            <option value="alwaysCooperate">Always Cooperate</option>
+            <option value="alwaysDefect">Always Defect</option>
+            <option value="titForTat">Tit for Tat</option>
+        </select>
+    </div>
+    
+    <div id="gameGrid" style="display: none;">
+        <div class="choice" id="playerCooperate">You Cooperate</div>
+        <div class="choice" id="playerDefect">You Defect</div>
+        <div class="choice" id="computerCooperate">Opponent Cooperates</div>
+        <div class="choice" id="computerDefect">Opponent Defects</div>
+    </div>
+
+    <div id="scoreboard" style="display: none;">
+        <p>Your Wins: <span id="wins">0</span></p>
+        <p>Your Losses: <span id="losses">0</span></p>
+    </div>
+
+    <div id="result"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 
