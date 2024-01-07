@@ -14,18 +14,35 @@ body {
     font-family: "Tektur", sans-serif;
     color: #445361;
     text-align: center;
+}
+
+/* Main content */
+main {
+    /* Enlarge main element to push footer down */
+    flex: 1 0 auto;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #intro {
     text-align: left;
 }
 
-#options, 
-#expectation,
-#instructions
-{
-    padding-left: 20px;
+button {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #3a3a3a;
+    color: #f7f7f7;
+    font: inherit;
+    font-size: 100%;
 }
 
 #tries {
@@ -99,14 +116,18 @@ footer {
     color: #f7f7f7;
 }
 
+#copyright {
+    font-size: 80%;
+}
+
 footer i {
-    font-size: 150%;
+    font-size: 120%;
     padding: 10px;
     color: #f7f7f7;
 }
 
 footer a {
-    font-size: 100%;
+    font-size: 80%;
     text-decoration: none;
     color: #f7f7f7;
 }
@@ -123,29 +144,42 @@ footer a {
 /* media query: tablets and larger (768px and greater) */
 @media screen and (min-width: 768px) {
     header {
-            font-size: 200%;
-            line-height: 50px;
-            margin: 0 0.5rem;
+        font-size: 200%;
+        line-height: 50px;
+        margin: 0 0.5rem;
+    }
+
+    #copyright {
+        font-size: 100%;
+    }
+    
+    footer i {
+        font-size: 150%;
+        padding: 10px;
+        color: #f7f7f7;
+    }
+    
+    footer a {
+        font-size: 100%;
+        text-decoration: none;
+        color: #f7f7f7;
     }
 }
 
 /* media query: laptops and larger (992px and greater) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid #f7f7f7;
+    #intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
     footer a:hover {
         border-bottom: 1px solid #f7f7f7;
     }
 
-    .button:hover {
+    button:hover {
         background-color: #f7f7f7;
-        color: #3a3a3a;
-    }
-
-    .button:hover a {
-        text-decoration: none;
         color: #3a3a3a;
     }
 }
