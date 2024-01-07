@@ -21,6 +21,10 @@ body {
     text-align: left;
 }
 
+#options {
+    padding-left: 20px;
+}
+
 #tries {
     text-align: center;
 }
