@@ -157,3 +157,23 @@ function updateChart() {
     statsChart.data.datasets[0].data = [stats.cooperations, stats.defections, stats.wins, stats.losses, stats.mutualBenefit, stats.mutualLoss];
     statsChart.update();
 }
+
+/**
+ * The getOpponentDecision function determines the computer's decision based on the selected opponent strategy.
+ * @param nothing
+ * @returns nothing
+ */
+function getOpponentDecision() {
+    const strategy = document.getElementById('opponentStrategy').value;
+    switch (strategy) {
+        case 'alwaysCooperate':
+            return 'Cooperate';
+        case 'alwaysDefect':
+            return 'Defect';
+        case 'titForTat':
+            return lastPlayerDecision || 'Cooperate';
+        default: // Random
+            return Math.random() > 0.5 ? 'Cooperate' : 'Defect';
+    }
+}
+
