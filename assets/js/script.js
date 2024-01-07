@@ -61,6 +61,11 @@ document.getElementById('maxTries').addEventListener('keydown', function(event){
     }
 });
 
+// Attach event listeners to each choice (Cooperate/Defect) in the game grid.
+document.querySelectorAll('.choice').forEach(choice => {
+    choice.addEventListener('click', handleChoice);
+});
+
 /**
  * The startGame function initializes the game settings and the chart.
  * @param nothing
@@ -99,11 +104,6 @@ function startGame() {
      // Initialize the chart to visualize game statistics.
      setupChart();
 }
-
-// Attach event listeners to each choice (Cooperate/Defect) in the game grid.
-document.querySelectorAll('.choice').forEach(choice => {
-    choice.addEventListener('click', handleChoice);
-});
 
 /**
  * The setupChart function will set up the Chart.js chart.
@@ -199,5 +199,21 @@ function handleChoice(event) {
     // Increment the tries counter.
     tries++;
     document.getElementById('tries').textContent = tries;
+}
+
+/**
+ * The updateGridSelections function updates the colors of the grid based on players decisions.
+ * @param {*} userDecision 
+ * @param {*} opponentDecision 
+ * @returns nothing
+ */
+function updateGridSelections(userDecision, opponentDecision) {
+    document.querySelectorAll('.choice').forEach(choice => {
+        choice.classList.remove('selected');
+    });
+
+    // Highlight the selected choices.
+    document.getElementById(`player${userDecision}`).classList.add('selected');
+    document.getElementById(`computer${opponentDecision}`).classList.add('selected');
 }
 
