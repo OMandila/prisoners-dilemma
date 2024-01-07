@@ -68,6 +68,16 @@ body {
     font-size: 18px;
 }
 
+#wins {
+    color: green;
+    font-weight: bold;
+}
+
+#losses {
+    color: red;
+    font-weight: bold;
+}
+
 #result {
     margin-top: 20px;
     font-size: 20px;
