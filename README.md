@@ -102,6 +102,6 @@ The project was inspired by classical game theory literature and other education
 - OpenAI ChatGPT-4
 
 ### Media
-No external media has been used in this project
+External media from FontAwesome has been used in this project.
 
 © 2023 Oliver Mandila. All rights reserved.
