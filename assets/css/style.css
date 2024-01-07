@@ -14,5 +14,19 @@ body {
     font-family: "Tektur", sans-serif;
     color: #445361;
     text-align: center;
+    padding: 20px;
+}
+
+#intro {
+    text-align: left;
+}
+
+#tries {
+    text-align: center;
+}
+
+#details {
+    font-size: 80%;
+    text-align: center;
 }
 
