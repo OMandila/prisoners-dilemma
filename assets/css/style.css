@@ -60,3 +60,13 @@ body {
     display: inline-block;
     padding: 25px;
 }
+
+#scoreboard p {
+    font-size: 18px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: gold;
+}
