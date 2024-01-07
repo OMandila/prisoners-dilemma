@@ -180,7 +180,7 @@ function getOpponentDecision() {
 /**
  * The handleChoice function handles the player's choice and determines the game's outcome.
  * @param {*} event 
- * @returns 
+ * @returns nothing
  */
 function handleChoice(event) {
     if (tries >= maxTries) {
@@ -221,24 +221,25 @@ function updateGridSelections(userDecision, opponentDecision) {
  * The updateScores function updates the game scores and statistics.
  * @param {*} userDecision 
  * @param {*} opponentDecision 
+ * @returns nothing
  */
 function updateScores(userDecision, opponentDecision) {
     let result;
 
     // Determine the outcome and update win/loss counters.
     if (userDecision === 'Cooperate' && opponentDecision === 'Defect') {
-        result = 'You get 3 years!';
+        result = 'In your last play you COOPERATED while your opponent DEFECTED. You get 3 years in prison!';
         losses++;
         stats.losses++;
     } else if (userDecision === 'Defect' && opponentDecision === 'Cooperate') {
-        result = 'You go free!';
+        result = 'In your last play you DEFECTED while your opponent COOPERATED. You go free!';
         wins++;
         stats.wins++;
     } else if (userDecision === 'Cooperate' && opponentDecision === 'Cooperate') {
-        result = 'You both get 1 year in prison.';
+        result = 'In your last play you both COOPERATED. You both get 1 year in prison.';
         stats.mutualBenefit++;
     } else if (userDecision === 'Defect' && opponentDecision === 'Defect') {
-        result = 'You both get 2 years in prison.';
+        result = 'In your last play you both DEFECTED. You both get 2 years in prison.';
         stats.mutualLoss++;
     }
 
