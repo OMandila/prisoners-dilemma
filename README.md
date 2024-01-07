@@ -92,13 +92,16 @@ This project is released under the [MIT License](LICENSE.txt).
 ## Acknowledgement
 
 ### Code Inspiration
+- Code Institute Love Math walkthrough project
+- OpenAI ChatGPT-4
 
 ### Content Inspiration
 The project was inspired by classical game theory literature and other educational tools like:
 - The INFORMS' Analytics Body of Knowledge textbook, and
 - The 'Game Theory: The Pinnacle of Decision Making (REMASTERED)' YouTube video
+- OpenAI ChatGPT-4
 
 ### Media
-Icons from FontAwesome
+No external media has been used in this project
 
 © 2023 Oliver Mandila. All rights reserved.

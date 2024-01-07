@@ -10,10 +10,39 @@
 <body>
     <h1>...Game Theory Illustrated...</h1>
     <h2>The Prisoner's Dilemma</h2>
+
     <div id="chartContainer" style="display: none;">
         <canvas id="gameStatsChart"></canvas>
     </div>
 
+    <div id="intro">
+        <h3>Introduction</h3>
+        <p>
+        In this game, you will play against the computer. You and your opponent are prisoners. You are both interrogated separately, in secret, and you cannot communicate with each other. You both have two options:
+        </p>
+            <ol>
+                <li>"COOPERATE" with each other (by each remaining silent), or</li>
+                <li>"DEFECT" from each other (by one betraying the other)</li>
+            </ol>
+        <p>If you both cooperate (remain silent), you both get to serve 1 year in prison.</p>
+        <p>If both of you defect (betray each other), you all get to serve 2 years in prison.</p>
+        <p>If one defects and the other cooperates, the defector goes free while the cooperator gets to serve 3 years in prison.</p>
+        
+        <div id="details">
+        <p>
+            In this game, to "cooperate" means to act in a way that is mutually beneficial, or at least not harmful, to other participants in the game.
+            If a player chooses to "cooperate," they are effectively choosing a strategy that, if reciprocated by the other player, leads to a favorable outcome for both.
+        </p>
+        <p>
+            To "defect" means to act in one's own self-interest at the expense of others.
+            In the Prisoner's Dilemma, a player who chooses to "defect" is betraying or going against the other player, seeking a better outcome for themselves even if it means a worse outcome for the other player.
+        </p>
+        </div>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
