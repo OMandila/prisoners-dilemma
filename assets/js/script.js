@@ -217,3 +217,40 @@ function updateGridSelections(userDecision, opponentDecision) {
     document.getElementById(`computer${opponentDecision}`).classList.add('selected');
 }
 
+/**
+ * The updateScores function updates the game scores and statistics.
+ * @param {*} userDecision 
+ * @param {*} opponentDecision 
+ */
+function updateScores(userDecision, opponentDecision) {
+    let result;
+
+    // Determine the outcome and update win/loss counters.
+    if (userDecision === 'Cooperate' && opponentDecision === 'Defect') {
+        result = 'You get 3 years!';
+        losses++;
+        stats.losses++;
+    } else if (userDecision === 'Defect' && opponentDecision === 'Cooperate') {
+        result = 'You go free!';
+        wins++;
+        stats.wins++;
+    } else if (userDecision === 'Cooperate' && opponentDecision === 'Cooperate') {
+        result = 'You both get 1 year in prison.';
+        stats.mutualBenefit++;
+    } else if (userDecision === 'Defect' && opponentDecision === 'Defect') {
+        result = 'You both get 2 years in prison.';
+        stats.mutualLoss++;
+    }
+
+    // Update cooperation and defection counts.
+    if (userDecision === 'Cooperate') stats.cooperations++;
+    else stats.defections++;
+
+    // Update the UI with the current scores and the result of the last round.
+    document.getElementById('result').innerText = result;
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
+
+    // Update the chart with the new statistics.
+    updateChart();
+}
