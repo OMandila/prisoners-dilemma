@@ -144,7 +144,7 @@ footer a {
 /* media query: tablets and larger (768px and greater) */
 @media screen and (min-width: 768px) {
     header {
-        font-size: 200%;
+        font-size: 150%;
         line-height: 50px;
         margin: 0 0.5rem;
     }
@@ -168,6 +168,12 @@ footer a {
 
 /* media query: laptops and larger (992px and greater) */
 @media screen and (min-width: 992px) {
+    header {
+        font-size: 200%;
+        line-height: 50px;
+        margin: 0 0.5rem;
+    }
+
     #Instructions {
         display: flex;
         justify-content: space-around;
