@@ -78,11 +78,11 @@ button {
 
 .scores {
     display: inline-block;
-    padding: 25px;
+    padding: 10px;
 }
 
-#scoreboard p {
-    font-size: 18px;
+#scoreboard {
+    font-size: 90%;
 }
 
 #wins {
@@ -96,8 +96,8 @@ button {
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 20px;
+    margin: 15px;
+    font-size: 80%;
     color: gold;
 }
 
