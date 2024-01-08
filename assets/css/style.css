@@ -180,6 +180,10 @@ footer a {
         align-items: flex-start;
     }
 
+    #Instructions>div {
+        width: 30%;
+    }
+
     footer a:hover {
         border-bottom: 1px solid #f7f7f7;
     }
