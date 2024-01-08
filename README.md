@@ -4,6 +4,8 @@
 This project is an interactive web application that simulates the classic game theory scenario known as the Prisoner's Dilemma.
 Game theory is a theoretical framework for conceiving social situations among competing players. It attempts to predict the outcomes of interactions where participants have conflicting interests, often with the goal of finding the optimal decision-making strategy.
 In the Prisoner's Dilemma, two prisoners must decide whether to betray the other or remain silent. The outcome depends on the decisions of both, acting independently, illustrating the interdependence typical in game theory. Game theory applies to the decisions of opponents, and it differs from decision theory, which typically applies to an individual decision-maker.
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/d25ac97d-d2db-4ffe-b0b4-dbe598362bf7)
+
 
 ## Project Overview
 This is a simple web application that simulates a decision-making scenario based on the Prisoner's Dilemma. It allows users to play against a computer-controlled opponent in a series of decision-making rounds. The user will make a choice (e.g., "Cooperate" or "Defect"), and the program will simulate the other player's choice, displaying the outcome. The application demonstrates the outcomes of cooperation versus defection and provides insights into game theory principles.
@@ -70,6 +72,17 @@ The application has been thoroughly tested using Google Chrome and the Chrome De
 The code has been validated from the deployed version of the application using W3C Validators for HTML and CSS as well as JShint.
 Test results are noted as per screenshots below:
 
+**Lighthouse**:
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/54402e0b-b158-46cc-abc8-096cfc08eead)
+
+**HTML Validator**:
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/d306e6ef-39b1-4a47-aa3f-3ede2a5d99b4)
+
+**CSS Jigsaw validator**:
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/59081221-0067-45e8-95b2-36360d3110ac)
+
+**Javascript code review using JSHint**:
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/69b7559f-4f7c-4601-8512-494538651d4a)
 
 ## Bugs
 
@@ -81,11 +94,21 @@ Test results are noted as per screenshots below:
 - No known bugs detected yet.
 
 ## Deployment
+The Prisoners Dilemma is deployed on GitHub Pages as follows:
+1. Go to the [Prisoners-Dilemma repo](https://github.com/OMandila/prisoners-dilemma)
+2. Go to the Settings tab on the top menu
+3. Click on Pages under Code and Automation on the left-side menu
+4. Under Build and Deployment, go to Source and select Deploy from a branch
+5. Go to Branch and select main
+6. Set the Select folder to root
+
+The live site can be accessed on: https://omandila.github.io/prisoners-dilemma/
 
 ### Local Setup
 To set up this project locally:
-1. Clone the repository to your local machine.
-2. Open the `index.html` file in a web browser.
+1. Clone the repository: git clone https://github.com/OMandila/prisoners-dilemma
+2. Navigate to the project directory: cd prisoners-dilemma
+3. Open index.html in a web browser.
 
 ## Contributions
 Contributions to this project are welcome. Please fork the repository and open a pull request with your proposed changes.
