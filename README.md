@@ -33,8 +33,10 @@ The Nash Equilibrium shows the outcome when both prisoners follow their dominant
 
 ## User Stories
 - As a user, I want to understand the basics of game theory.
-- As a student, I'm interested in seeing how I can play the Prisoner's Dilemma in practice.
+- As a decision maker, I want to model the outcome of my decisions with a computer game.
+- As a student, I'm interested in seeing how the Prisoner's Dilemma works in practice.
 - As a teacher, I want a tool to illustrate strategic decision-making in an interactive way.
+- As an analyst, I want to visualise large amounts of data about random events and notice any useful patterns.
 
 ## Design
 
@@ -45,19 +47,17 @@ The application is fully responsive, providing a seamless experience on devices 
 The color scheme is minimalistic, with a focus on blue and grey tones, ensuring readability and a professional appearance.
 
 ### Font Choice
-We've chosen a clean, sans-serif font for its readability and modern feel.
+We've chosen Tektur as the primary font for the app because of its distinct, modern, and slightly technical appearance.
 
 ### Icons
-Icons are used sparingly, primarily for navigational elements and to enhance user interaction.
-
-### Wireframes
-(Include wireframe images or links here, if available.)
+Icons are used sparingly, primarily for visual elements and to enhance user interaction.
 
 ## Website Structure and Features
+- **Introduction and instructions**: Users have instructions to familiarise with the basics of the Prisoner's Dilemma and how to play the game.
 - **Interactive Game Grid**: Users interact with a grid to select their moves.
 - **Dynamic Score Display**: Real-time updates of game scores and statistics.
 - **Strategy Selection**: Users can choose different strategies for the computer opponent.
-- **Graphical Statistics**: Visual representation of game outcomes using charts.
+- **Graphical Statistics**: Visual representation of game outcomes using a bar chart.
 
 ## Technologies Used
 - HTML5
@@ -66,15 +66,19 @@ Icons are used sparingly, primarily for navigational elements and to enhance use
 - Chart.js (for graphical representations)
 
 ## Testing and Validation
-The application has been thoroughly tested across multiple browsers and devices. The code has been validated using W3C Validator.
+The application has been thoroughly tested using Google Chrome and the Chrome Developer Tools as well as the Chrome device simulators.
+The code has been validated from the deployed version of the application using W3C Validators for HTML and CSS as well as JShint.
+Test results are noted as per screenshots below:
+
 
 ## Bugs
 
 ### Resolved Bugs
 - Issue with spacing in text animation resolved by using non-breaking spaces.
+- Issue with responsiveness at >992px resolved by defining width of the div components to 30%
 
 ### Unresolved Bugs
-- (List of known issues that haven't been resolved.)
+- No known bugs detected yet.
 
 ## Deployment
 
