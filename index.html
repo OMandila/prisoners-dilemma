@@ -1,159 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Prisoners' Dilemma</title>
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <a href="index.html">
             <h1><i class="fa-solid fa-dice-d20"></i> Game Theory Illustrated <i class="fa-solid fa-dice-d20"></i></h1>
-        <br>
+            <br>
             <h2>The Prisoner's Dilemma</h2>
         </a>
         <br>
     </header>
     <!-- Main page content -->
     <main>
+        <div id="intro">
+            <div>
+                <h3>Introduction</h3>
+                <p>
+                    In this game, you will play against the computer. You and your opponent are prisoners. You are both
+                    interrogated separately, in secret, and you cannot communicate with each other. You both have two
+                    options:
+                </p>
 
-    <div id="intro">
-        <h3>Introduction</h3>
-        <p>
-        In this game, you will play against the computer. You and your opponent are prisoners. You are both interrogated separately, in secret, and you cannot communicate with each other. You both have two options:
-        </p>
-        <br>
-        <div id="options">
-            <ol>
-                <li><strong>"COOPERATE"</strong> with each other (by each remaining silent), or</li>
-                <li><strong>"DEFECT"</strong> from each other (by one betraying the other)</li>
-            </ol>
+                <br>
+                <div id="options">
+                    <ol>
+                        <li><strong>"COOPERATE"</strong> with each other (by each remaining silent), or</li>
+                        <li><strong>"DEFECT"</strong> from each other (by one betraying the other)</li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <div>
+                <h3>Instructions</h3>
+                <div id="instructions">
+                    <ol>
+                        <li>Enter the number of tries that you want to play.</li>
+                        <li>Select the Start Game button.</li>
+                        <li>Chose the strategy that you want your opponent to use.</li>
+                        <li>Make your choice on the grid, to either COOPERATE or DEFECT.</li>
+                        <li>Review the outcome of your choice(s) in the results.</li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <div>
+                <h3>Expected results</h3>
+                <div id="expectation">
+                    <ul>
+                        <li>If you both cooperate (remain silent), you both get to serve <strong>1 year</strong> in
+                            prison.
+                        </li>
+                        <li>If both of you defect (betray each other), you all get to serve <strong>2 years</strong> in
+                            prison.</li>
+                        <li>If one defects and the other cooperates, the defector goes free, the cooperator gets
+                            <strong>3
+                                years</strong> in prison.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <h3>Extras:</h3>
+                <div id="details">
+                    <p>
+                        In this game, to "cooperate" means to act in a way that is mutually beneficial, or at least not
+                        harmful, to other participants in the game.
+                        If a player chooses to "cooperate," they are effectively choosing a strategy that, if
+                        reciprocated
+                        by the other player, leads to a favorable outcome for both.
+                    </p>
+                    <p>
+                        To "defect" means to act in one's own self-interest at the expense of others.
+                        In the Prisoner's Dilemma, a player who chooses to "defect" is betraying or going against the
+                        other
+                        player, seeking a better outcome for themselves even if it means a worse outcome for the other
+                        player.
+                    </p>
+                </div>
+            </div>
         </div>
         <br>
-        <h3>Instructions</h3>
-        <div id="instructions">
-            <ol>
-                <li>Enter the number of tries that you want to play.</li>
-                <li>Select the Start Game button.</li>
-                <li>Chose the strategy that you want your opponent to use.</li>
-                <li>Make your choice on the grid, to either COOPERATE or DEFECT.</li>
-                <li>Review the outcome of your choice(s) in the results.</li>
-            </ol>
-        </div>
-        <br>
-        <h3>Expected results</h3>
-        <div id="expectation">
-        <ul>
-        <li>If you both cooperate (remain silent), you both get to serve <strong>1 year</strong> in prison.</li>
-        <li>If both of you defect (betray each other), you all get to serve <strong>2 years</strong> in prison.</li>
-        <li>If one defects and the other cooperates, the defector goes free, the cooperator gets <strong>3 years</strong> in prison.</li>
-        </ul>
+        <div id="tries1">
+            <h4>Enter the number of times you wish to play, then click Start Game below:</h4>
         </div>
 
-        <br>
-        <h3>Extras:</h3>
-        <div id="details">
-        <p>
-            In this game, to "cooperate" means to act in a way that is mutually beneficial, or at least not harmful, to other participants in the game.
-            If a player chooses to "cooperate," they are effectively choosing a strategy that, if reciprocated by the other player, leads to a favorable outcome for both.
-        </p>
-        <p>
-            To "defect" means to act in one's own self-interest at the expense of others.
-            In the Prisoner's Dilemma, a player who chooses to "defect" is betraying or going against the other player, seeking a better outcome for themselves even if it means a worse outcome for the other player.
-        </p>
+        <div id="tries2" style="display: none;">
+            <p>You have played <strong><span id="tries">0</span></strong> time(s) since you started the game. Click
+                Start Game below to restart the counter:</p>
         </div>
 
-    </div>
-    <br>
-    <div id="tries1">
-        <h4>Enter the number of times you wish to play, then click Start Game below:</h4>
-    </div>
+        <div id="setup">
+            <input type="number" id="maxTries" placeholder="Enter number of tries" min="1">
+            <button id="startGame">Start Game</button>
+        </div>
 
-    <div id="tries2" style="display: none;">
-        <p>You have played <strong><span id="tries">0</span></strong> time(s) since you started the game. Click Start Game below to restart the counter:</p>
-    </div>
+        <div id="strategySelection" style="display: none;">
+            <label for="opponentStrategy">Select your Opponent's Strategy:</label>
+            <select id="opponentStrategy">
+                <option value="random">Random</option>
+                <option value="alwaysCooperate">Always Cooperate</option>
+                <option value="alwaysDefect">Always Defect</option>
+                <option value="titForTat">Tit for Tat</option>
+            </select>
+        </div>
 
-    <div id="setup">
-        <input type="number" id="maxTries" placeholder="Enter number of tries" min="1">
-        <button id="startGame">Start Game</button>
-    </div>
+        <div id="gameGrid" style="display: none;">
+            <div class="choice" id="playerCooperate">You Cooperate</div>
+            <div class="choice" id="playerDefect">You Defect</div>
+            <div class="choice" id="computerCooperate">Opponent Cooperates</div>
+            <div class="choice" id="computerDefect">Opponent Defects</div>
+        </div>
 
-    <div id="strategySelection" style="display: none;">
-        <label for="opponentStrategy">Select your Opponent's Strategy:</label>
-        <select id="opponentStrategy">
-            <option value="random">Random</option>
-            <option value="alwaysCooperate">Always Cooperate</option>
-            <option value="alwaysDefect">Always Defect</option>
-            <option value="titForTat">Tit for Tat</option>
-        </select>
-    </div>
-    
-    <div id="gameGrid" style="display: none;">
-        <div class="choice" id="playerCooperate">You Cooperate</div>
-        <div class="choice" id="playerDefect">You Defect</div>
-        <div class="choice" id="computerCooperate">Opponent Cooperates</div>
-        <div class="choice" id="computerDefect">Opponent Defects</div>
-    </div>
+        <div id="scoreboard" style="display: none;">
+            <p class="scores">You went free: <span id="wins">0</span> time(s)</p>
+            <p class="scores">You got 3 years: <span id="losses">0</span> time(s)</p>
+        </div>
 
-    <div id="scoreboard" style="display: none;">
-        <p class="scores">You went free: <span id="wins">0</span> time(s)</p>
-        <p class="scores">You got 3 years: <span id="losses">0</span> time(s)</p>
-    </div>
+        <div id="result"></div>
 
-    <div id="result"></div>
-
-    <div id="chartContainer" style="display: none;">
-        <canvas id="gameStatsChart"></canvas>
-    </div>
+        <div id="chartContainer" style="display: none;">
+            <canvas id="gameStatsChart"></canvas>
+        </div>
 
     </main>
     <!-- Footer content -->
     <footer>
         <div id="copyright">©2023 Oliver Mandila. All Rights Reserved.</div>
-  
+
         <div id="social-networks">
-          <a
-            href="https://github.com/OMandila"
-            target="_blank"
-            rel="noopener noreferer"
-            aria-label="check my linkedin profile (opens in a new tab)"
-            ><i class="fa-brands fa-square-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/oliver-mandila/"
-            target="_blank"
-            rel="noopener noreferer"
-            aria-label="check my linkedin profile (opens in a new tab)"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a
-            href="https://medium.com/@olivermandila"
-            target="_blank"
-            rel="noopener noreferer"
-            aria-label="check my medium profile (opens in a new tab)"
-            ><i class="fa-brands fa-medium"></i></a>
-          <a
-            href="https://www.instagram.com/olivermandila/"
-            target="_blank"
-            rel="noopener noreferer"
-            aria-label="check my instagram profile (opens in a new tab)"
-            ><i class="fa-brands fa-square-instagram"></i
-          ></a>
+            <a href="https://github.com/OMandila" target="_blank" rel="noopener noreferer"
+                aria-label="check my linkedin profile (opens in a new tab)"><i
+                    class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/oliver-mandila/" target="_blank" rel="noopener noreferer"
+                aria-label="check my linkedin profile (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://medium.com/@olivermandila" target="_blank" rel="noopener noreferer"
+                aria-label="check my medium profile (opens in a new tab)"><i class="fa-brands fa-medium"></i></a>
+            <a href="https://www.instagram.com/olivermandila/" target="_blank" rel="noopener noreferer"
+                aria-label="check my instagram profile (opens in a new tab)"><i
+                    class="fa-brands fa-square-instagram"></i></a>
         </div>
-  
+
         <div id="policies">
-          <a href="index.html">Policies</a>
+            <a href="index.html">Policies</a>
         </div>
-      </footer>
-    <script
-      src="https://kit.fontawesome.com/26b5e74290.js"
-      crossorigin="anonymous"
-    ></script>
+    </footer>
+    <script src="https://kit.fontawesome.com/26b5e74290.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
