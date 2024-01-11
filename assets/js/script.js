@@ -60,11 +60,36 @@ let statsChart;
 document.getElementById('startGame').addEventListener('click', startGame);
 
 // Event listener for the 'Enter' button.
-document.getElementById('maxTries').addEventListener('keydown', function(event){
-    if (event.key === 'Enter'){
+document.getElementById('maxTries').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
         startGame();
     }
 });
+
+// This code for implementing the Modal was derived from W3Schools in https://www.w3schools.com/howto/howto_css_modals.asp
+// Get the modal
+const modal = document.getElementById("myGameOverModal");
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+/**
+ * Function to open the modal
+ */
+function openModal() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 // Attach event listeners to each choice (Cooperate/Defect) in the game grid.
 document.querySelectorAll('.choice').forEach(choice => {
@@ -87,7 +112,7 @@ function startGame() {
 
     // Destroy the existing chart if it exists
     if (statsChart) {
-      statsChart.destroy();
+        statsChart.destroy();
     }
 
     // Initialize the chart to visualize game statistics.
@@ -107,20 +132,20 @@ function startGame() {
         stats[key] = 0;
     }
 
-     // Updating the UI with the initial values.
-     document.getElementById('wins').textContent = wins;
-     document.getElementById('losses').textContent = losses;
-     document.getElementById('gameGrid').style.display = 'grid';
-     document.getElementById('scoreboard').style.display = 'block';
-     document.getElementById('strategySelection').style.display = 'block';
- 
-     // Hide the intro and show the chart container.
-     document.getElementById('intro').style.display = 'none';
-     document.getElementById('chartContainer').style.display = 'block';
-     
-     // Hide the tries input box and show tries tracker.
-     document.getElementById('tries1').style.display = 'none';
-     document.getElementById('tries2').style.display = 'block';
+    // Updating the UI with the initial values.
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
+    document.getElementById('gameGrid').style.display = 'grid';
+    document.getElementById('scoreboard').style.display = 'block';
+    document.getElementById('strategySelection').style.display = 'block';
+
+    // Hide the intro and show the chart container.
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('chartContainer').style.display = 'block';
+
+    // Hide the tries input box and show tries tracker.
+    document.getElementById('tries1').style.display = 'none';
+    document.getElementById('tries2').style.display = 'block';
 
 }
 
@@ -202,7 +227,7 @@ function getOpponentDecision() {
  */
 function handleChoice(event) {
     if (tries >= maxTries) {
-        alert('Game over! Please restart to play again.');
+        openModal()
         return;
     }
 
