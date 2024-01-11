@@ -160,7 +160,7 @@ function setupChart() {
         data: {
             labels: ['Cooperations', 'Defections', 'Wins', 'Losses', 'Mutual Benefit', 'Mutual Loss'],
             datasets: [{
-                label: 'Game Statistics',
+                label: '',
                 data: [0, 0, 0, 0, 0, 0],
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.2)',
@@ -186,7 +186,10 @@ function setupChart() {
                 y: {
                     beginAtZero: true
                 }
-            }
+            },
+            legend: {
+                display: false // Hide the legend
+            },
         }
     });
 }
