@@ -4,7 +4,8 @@
 This project is an interactive web application that simulates the classic game theory scenario known as the Prisoner's Dilemma.
 Game theory is a theoretical framework for conceiving social situations among competing players. It attempts to predict the outcomes of interactions where participants have conflicting interests, often with the goal of finding the optimal decision-making strategy.
 In the Prisoner's Dilemma, two prisoners must decide whether to betray the other or remain silent. The outcome depends on the decisions of both, acting independently, illustrating the interdependence typical in game theory. Game theory applies to the decisions of opponents, and it differs from decision theory, which typically applies to an individual decision-maker.
-![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/d25ac97d-d2db-4ffe-b0b4-dbe598362bf7)
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/bc2630c7-60f9-482c-ae7f-c36063497af9)
+
 
 
 ## Project Overview
@@ -82,7 +83,8 @@ Test results are noted as per screenshots below:
 ![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/59081221-0067-45e8-95b2-36360d3110ac)
 
 **Javascript code review using JSHint**:
-![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/69b7559f-4f7c-4601-8512-494538651d4a)
+![image](https://github.com/OMandila/prisoners-dilemma/assets/71443713/45465737-5534-4faa-a00b-69c6aa2966e9)
+
 
 ## Bugs
 
