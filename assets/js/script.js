@@ -6,7 +6,6 @@ window.onload = typeIntroText;
  * It gives the player an entertaining feel at the game launch
  * @returns nothing
  */
-
 function typeIntroText() {
     const introElement = document.getElementById('details');
     const fullText = introElement.innerText;
@@ -15,7 +14,10 @@ function typeIntroText() {
 
     introElement.innerText = ''; // Clear the existing text
 
-    // Function to add one character at a time
+    /**
+     * Function to add one character at a time
+     * @returns nothing
+     */
     function addCharacter() {
         currentText += fullText.charAt(index);
         introElement.innerText = currentText;
@@ -48,6 +50,9 @@ let stats = {
     mutualLoss: 0
 };
 
+const message = document.getElementById("errorNumber");
+const ctx = document.getElementById('gameStatsChart').getContext('2d');
+
 // Variable to hold the Chart.js chart instance.
 let statsChart;
 
@@ -72,9 +77,21 @@ document.querySelectorAll('.choice').forEach(choice => {
  * @returns nothing
  */
 function startGame() {
+
+    // Deselect the choice buttons
+    
+
+    message.innerText = "";
+    // Destroy the existing chart if it exists
+    if (statsChart) {
+      statsChart.destroy();
+    }
+    // Initialize the chart to visualize game statistics.
+    setupChart();
+
     maxTries = parseInt(document.getElementById('maxTries').value);
     if (!maxTries || maxTries <= 0) {
-        alert('Please enter a valid number of tries.');
+        message.innerText = "Please enter a valid number of tries."
         return;
     }
 
@@ -101,8 +118,7 @@ function startGame() {
      document.getElementById('tries1').style.display = 'none';
      document.getElementById('tries2').style.display = 'block';
 
-     // Initialize the chart to visualize game statistics.
-     setupChart();
+     
 }
 
 /**
@@ -111,7 +127,6 @@ function startGame() {
  * @returns nothing
  */
 function setupChart() {
-    const ctx = document.getElementById('gameStatsChart').getContext('2d');
     statsChart = new Chart(ctx, {
         type: 'bar',
         data: {

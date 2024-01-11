@@ -54,6 +54,10 @@ button {
     text-align: center;
 }
 
+#errorNumber {
+    color: red;
+}
+
 #gameGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
