@@ -78,14 +78,18 @@ document.querySelectorAll('.choice').forEach(choice => {
  */
 function startGame() {
 
-    // Deselect the choice buttons
-    
+    // Clear any selections in the choice buttons
+    document.querySelectorAll('.choice').forEach(choice => {
+        choice.classList.remove('selected');
+    });
 
     message.innerText = "";
+
     // Destroy the existing chart if it exists
     if (statsChart) {
       statsChart.destroy();
     }
+
     // Initialize the chart to visualize game statistics.
     setupChart();
 
@@ -118,7 +122,6 @@ function startGame() {
      document.getElementById('tries1').style.display = 'none';
      document.getElementById('tries2').style.display = 'block';
 
-     
 }
 
 /**
